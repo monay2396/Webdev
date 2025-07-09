@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from bostamihtml.ibthemespro.com/blogTwo.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Jan 2023 13:21:53 GMT -->
+<head>
+    <!-- common meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo/logo-removebg-preview.png" type="image/x-icon">
+    <!--=== fontaswesome ===-->
+    <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!--=== owl carousel css === -->
+    <!--=== jquary modal css ===-->
+    <link rel="stylesheet" href="css/vendor/jquery.modal.min.css" />
+    <!--=== main css ===-->
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Portfolio </title>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+    <!-- /PRELOADER -->
+
+
+<div class="bg-homeBg min-h-screen dark:bg-homeBg-dark bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+        <div class="z-50">
+            <!-- container start -->
+            <div class="container">
+                <!-- header start for large screens -->
+                <header class="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
+                    <div class="flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] lg:bg-transparent dark:bg-black">
+                        <div class="flex justify-between w-full items-center space-x-4 lg:my-8 my-5">
+
+                            <div class="flex items-center">
+                                <!-- light and dark mode button -->
+                                <button id="theme-toggle-mobile" type="button"
+                                    class="dark-light-btn lg:hidden w-[44px] h-[44px] ml-2">
+                                    <i id="theme-toggle-dark-icon-mobile" class="fa-solid text-xl fa-moon hidden"></i>
+                                    <i id="theme-toggle-light-icon-mobile" class="fa-solid fa-sun text-xl hidden"></i>
+                                </button>
+                                <!-- mobile toggle button -->
+                                <button id="menu-toggle" type="button" class="menu-toggle-btn">
+                                    <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
+                                    <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- header items two for large screens -->
+                    <nav class="hidden lg:block">
+                        <ul class="flex my-12">
+                            <li>
+                                <a class="menu-item-two" href="index.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span> Home </a>
+                            </li>
+                            <li>
+                                <a class="menu-item-two" href="aboutTwo.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span> About </a>
+                            </li>
+                            <li>
+                                <a class="menu-item-two" href="resumeTwo.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </span> Resume </a>
+                            </li>
+                            <li>
+                                <a class="menu-item-two" href="portfiloTwo.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fas fa-briefcase"></i>
+                                    </span> Works </a>
+                            </li>
+                            <li>
+                                <a class="menu-item-two-active" href="blogTwo.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </span> Course </a>
+                            </li>
+                            <li>
+                                <a class="menu-item-two" href="contactTwo.html">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </span> Contact </a>
+                            </li>
+                            <li>
+                                <!-- light and dark mode button -->
+                                <button id="theme-toggle" type="button" class="dark-light-btn w-[44px] h-[44px] ml-2">
+                                    <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
+                                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- mobile menu start -->
+                    <nav id="navbar" class="hidden lg:hidden">
+                        <ul
+                            class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
+                            <li>
+                                <a class="mobile-menu-items" href="index.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span> Home </a>
+                            </li>
+                            <li>
+                                <a class="mobile-menu-items" href="aboutTwo.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span> About </a>
+                            </li>
+                            <li>
+                                <a class="mobile-menu-items" href="resumeTwo.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </span> Resume </a>
+                            </li>
+                            <li>
+                                <a class="mobile-menu-items" href="portfiloTwo.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fas fa-briefcase"></i>
+                                    </span> Works </a>
+                            </li>
+                            <li>
+                                <a class="mobile-menu-items-active" href="blogTwo.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </span> Course </a>
+                            </li>
+                            <li>
+                                <a class="mobile-menu-items" href="contactTwo.html">
+                                    <span class="mr-2 text-xl">
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </span> Contact </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </header>
+                <!-- header  end -->
+
+                <!-- blog   section start -->
+                <div class="bg-white lg:rounded-2xl dark:bg-[#111111]">
+                    <div class="container px-4 sm:px-5 md:px-10 lg:px-[60px]">
+                        <div class="py-12">
+                            <h2 class="after-effect after:left-32 mt-12 lg:mt-0">Course</h2>
+                            <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
+
+                                <!-- blog items one start -->
+
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full bg-[#fcf4ff] dark:bg-transparent dark:border-[#212425] dark:border-2">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex1" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/1.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">Full Stack Web Development</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex1" rel="modal:open">Full Stack Web Development Course In Bangladesh.
+                                         </a>
+                                    </h3>
+                                </div>
+                                <!-- blog items one end -->
+
+                                <!-- blog items two start -->
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full bg-[#eefbff] dark:bg-transparent dark:border-[#212425] dark:border-2">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex2" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/2.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">WP Theme Development</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex2" rel="modal:open"> WordPress Theme Development Course In Bangladesh.</a>
+                                    </h3>
+                                </div>
+                                <!-- blog items two end  -->
+
+                                <!-- blog items three start -->
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] dark:border-2 bg-[#fcf4ff] dark:bg-transparent">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex3" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/3.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">Digital Marketing</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex3" rel="modal:open">Digital Marketing Course In Bangladesh.</a>
+                                    </h3>
+                                </div>
+                                <!-- blog items three end -->
+
+                                <!-- blog items four  start -->
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] bg-[#fcf4ff] dark:bg-transparent dark:border-2">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex4" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/4.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">Graphic Design </span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex4" rel="modal:open">Graphic Design Course In Bangladesh</a>
+                                    </h3>
+                                </div>
+                                <!-- blog items four  end -->
+
+                                <!-- blog items five  start -->
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] bg-[#fcf4ff] dark:bg-transparent dark:border-2">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex5" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/5.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">Android App Development</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex5" rel="modal:open">Android App Development Course In Bangladesh</a>
+                                    </h3>
+                                </div>
+                                <!-- blog items five   end -->
+
+                                <!-- blog items six  start -->
+                                <div
+                                    class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] bg-[#fcf4ff] dark:bg-transparent dark:border-2">
+                                    <div class="overflow-hidden rounded-lg">
+                                        <a href="#ex6" rel="modal:open">
+                                            <img class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                                src="images/blog_images/small/6.jpg" alt="blog image" />
+                                        </a>
+                                    </div>
+                                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                                        <span>January 2023</span>
+                                        <span class="dot-icon">Fiverr Success Course</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                        <a href="#ex6" rel="modal:open">Fiverr Success Course In Bangladesh</a>
+                                    </h3>
+                                </div>
+                                <!-- blog items six  end -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer start -->
+                    <footer class="overflow-hidden rounded-b-2xl bg-[#f8fbfb] dark:bg-[#212425]">
+                        <p class="text-center py-6 text-gray-lite dark:text-color-910">
+                          © 2025 All Rights Reserved by
+                          <a class="hover:text-[#FA5252] duration-300 transition" href="https://www.facebook.com/profile.php?id=61578095884386"
+                            target="_blank" rel="noopener noreferrer">WebDev</a>.
+                        </p>
+                      </footer>
+                   <!-- footer ends -->
+                </div>
+                <!-- blog section start -->
+            </div>
+
+            <!-- modal  for item one start -->
+
+            <div id="ex1" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/1.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span>January 2023</span>
+                            <span class="dot-icon">Full Stack Web Development</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> How to Own Full Stack Web Development Course In Bangladesh.</h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> একজন ফুল স্ট্যাক ওয়েব ডেভেলপার হবার জন্য আপনাকে একটি ওয়েবসাইট বা ওয়েব অ্যাপ্লিকেশনের ফ্রন্ট-এন্ড ও ব্যাক-এন্ড নিয়ে খুব ভালোভাবে জানতে হবে। তাই পুরো প্রোগ্রামে আপনি কয়েক ধাপে দুই ধরনের ডেভেলপমেন্টই শেখার সুযোগ পাবেন। ক্যারিয়ার ট্র্যাকের যাবতীয় ম্যাটেরিয়াল আমরা Amazon-সহ বিভিন্ন টেক কোম্পানিতে কর্মরত ইঞ্জিনিয়ারদের দিয়ে রিভিউ করিয়ে নিয়েছি, যেন আপনি ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ট্রেনিং পান। </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> যারা অংশ নিচ্ছেন, তাদের বেশিরভাগই এগুলো সম্পর্কে বেসিক ধারণা রাখেন; তাই মূল প্রোগ্রামে এগুলো ঢুকিয়ে সিলেবাস বড় করতে চাইনি আমরা। কিন্তু যাদের এই তিনটি টপিকে ধারণা নেই তারাও যেন এই প্রোগ্রামে অংশ নিতে পারেন এজন্য html5, css3 ও bootstrap5 নিয়ে আমরা আলাদাভাবে একটি কোর্স তৈরি করেছি। আপনি যখন এই প্রোগ্রামে রেজিস্টার করবেন, তখন মূল কোর্সের পাশাপাশি html, css ও bootstrap কোর্সেরও এক্সেস পেয়ে যাবেন! মূল কথাঃ আপনি যদি আগে থেকে কোনো কোডিং নাও পারেন তবুও এই প্রোগ্রামে অংশ নিতে পারবেন। </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> মডার্ন ওয়েবসাইট ও অ্যাপ্লিকেশনগুলো সাধারণত ডায়নামিক হয়। অর্থাৎ সেগুলোতে ইউজাররা নানা ধরনের ইন্টারঅ্যাকশন করে থাকেন। আবার সেসব ইন্টারঅ্যাকশন নিয়ন্ত্রণ করা হয় একটি সিস্টেম দিয়ে, যেটি গুরুত্বপূর্ণ ডেটা সংগ্রহ ও সংরক্ষণের কাজও করে। পুরো প্রক্রিয়াটি দাঁড় করানোর জন্য বিভিন্ন টেকনোলজি ব্যবহার করেন ওয়েব ডেভেলপাররা।</p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> WebDev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By WebDev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 3 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p><br>
+                                <a href="https://terabox.com/s/12oVUy87pZecpOOdKFX5v-w">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+            </div>
+            <!-- modal  for item one end -->
+
+            <!-- modal  for item two start -->
+            <div id="ex2" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/2.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span> January 2023  </span>
+                            <span class="dot-icon">WP Theme Development</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> WordPress Theme Development </h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> As of January 2015, 23% of world’s top websites are using WordPress for content management. WordPress is open-source content management system introduced in 2003. WordPress allows its users to install and switch between themes. This gives the users unique advantage of changing the outlook and functionality of their site. It also allows many plugins and device oriented modifications. That’s why WordPress is the most popular content management system and there is huge demand of freelancers with expertise in WordPress. Now you know the reason of searching WordPress training in Dhaka. WordPress is a basic knowledge for people connected with IT work. A lot of freelancers from Bangladesh are doing a great job with WordPress. And, the potentiality of building the career as IT consultant or freelancer is very high. </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> No idea abouthow to learn WordPress?There are some institutions providingWordPress training in Bangladesh.You can also learn it throughWordPress tutorials.Website Solutions is also providingWordPress training in Dhaka.Our training is focused onWordPress course. </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> We cover from the initial to the epic contents of WordPress. It doesn’t matter either you are coming with a query ofwhat is WordPressor you are interested in enriching your skill onWordPress theme development.Our course is designed to be helpful for both the parties. </p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> Webdev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By Webdev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 5 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p> <br>
+                                <a href="https://terabox.com/s/13KqgsFaAgVsJz5lnyFJ4MA">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+
+            </div>
+            <!-- modal  for item two end -->
+
+            <!-- modal  for item three start -->
+            <div id="ex3" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/3.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span>January 2023</span>
+                            <span class="dot-icon">Digital Marketing Course</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> Digital Marketing Course In Bangladesh.
+                        </h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> ডিজিটাল মার্কেটিং হল ইলেকট্রনিক মিডিয়াকে ব্যবহার করে ইন্টারনেট দুনিয়ায় পণ্য,প্রতিষ্ঠান বা ব্র্যান্ডের প্রচারনা বা বিজ্ঞাপন দেয়া। ইন্টারনেট ব্যবস্থা ডিজিটাল মার্কেটিং এর সঙ্গে ঘনিষ্ঠভাবে যুক্ত। যেমন- গুগল, ইউটিউব, বিভিন্ন ওয়েবসাইট, ফেসবুক সহ নানান সামাজিক যোগাযোগ মাধ্যম। কম্পিউটার বেসিক জানা থাকলেই এ কোর্স করতে পারবে।</p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> লিফলেট, ব্যানার, ফেস্টুন এর যুগ শেষে এখন হল ডিজিটাল মার্কেটিং কিংবা অনলাইন মার্কেটিং এর যুগ। অনলাইন মার্কেটিং এর মাধ্যমে এনালগ মার্কেটিং এর চেয়ে কম খরচে দীর্ঘস্থায়ী এবং ফলপ্রসূ প্রচারনা করা সম্ভব। এজন্য সম্প্রতি যেসব কোম্পানি এনালগ মার্কেটিং এ সফলতা পাচ্ছে না, ডিজিটাল মার্কেটিং এর মাধ্যমে তারা আজ সফল। ডিজিটাল মার্কেটিং হল ইলেকট্রনিক মিডিয়ার মাধ্যমে পণ্য বা ব্র্যান্ডের প্রচারকে বোঝায়। যেমন- ওয়েবসাইট, এস ই ও (সার্চ ইঞ্জিন অপটিমাইজেশন), অনলাইন অ্যাড, ইমেইল মার্কেটিং, ভিডিও মার্কেটিং, পে পার ক্লিক (PPC) মার্কেটিং, সোশ্যাল মিডিয়া মার্কেটিং (Facebook, Twitter, LinkedIn, etc.), মোবাইল মার্কেটিং (SMS, MMS, etc.) ইত্যাদির মাধ্যমে নিজের পণ্য বা ব্র্যান্ডের প্রচার। </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> ডিজিটাল মার্কেটিং হল বর্তমানে অনলাইনে আয়ের একটা সহজ ক্ষেত্র । যারা অনলাইনে চাকুরী বা পড়াশুনার পাশাপাশি ঘরে বসে অর্থ উপার্জন করতে চান তাদের জন্য অনেক ভাল সুযোগ আছে এই সেক্টরে। শুধুমাত্র ডিজিটাল মার্কেটিং করে আপনি নিজেকে স্বাবলম্বী করে তুলতে পারবেন এবং ভবিষ্যতে এটাকে ভাল পেশা হিসাবে নিতে পারবেন। </p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> WebDev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By WebDev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 5 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p> <br>
+                                <a href="https://terabox.com/s/1uLhxPKxoHO4pGd9kJQCaZg">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+            </div>
+            <!-- modal  for item three end -->
+
+            <!-- modal  for item four start -->
+            <div id="ex4" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/4.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span>January 2023</span>
+                            <span class="dot-icon">Graphic Design</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> Graphic Design Course In Bangladesh</h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> ভিজ্যুয়াল কনটেন্টের চাহিদা বেড়ে যাওয়ায় এখন মার্কেটাররা গ্রাফিক্যাল কনটেন্টের দিকে ঝুঁকেছেন। তাই বিশ্বজুড়ে গ্রাফিক ডিজাইনারদের চাহিদা এখন আকাশচুম্বী। এক জরিপে দেখা যায়, ভালো একটা লোগোর জন্য একটি ছোট প্রতিষ্ঠানও ৫০০ ডলার পর্যন্ত খরচ করে। আপনি কি ডিজাইনের কাজ করতে ভালোবাসেন? তাহলে আপডেটেড মডিউলে দক্ষ প্রশিক্ষকের সাথে আমাদের Graphics Design Course-টি আপনার জন্যই। </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> একজন সফল গ্রাফিক ডিজাইনার হতে হলে মানসম্পন্ন কারিকুলামে প্রশিক্ষণের পাশাপাশি প্রজেক্ট ভিত্তিক কাজের অভিজ্ঞতা আর মার্কেটপ্লেস সম্পর্কে ভালো ধারণা থাকা প্রয়োজন । তাই এসব কিছুই একসাথে অন্তর্ভুক্ত করা হয়েছে আমাদের কোর্স মডিউলে। গ্রাফিক ডিজাইন কোর্স থেকে আপনি অ্যাডোবি ফটোশপ আর অ্যাডোবি ইলাস্ট্রেটর ব্যবহার করে যেকোনো বিজ্ঞাপন, ব্যানার, টি-শার্ট ডিজাইন, প্রোডাক্ট ডিজাইন করতে শিখবেন। তাছাড়াও প্রজেক্ট ভিত্তিক কাজের জন্য পাচ্ছেন আধুনিক ল্যাব ব্যবহারের সুযোগ। এভাবে কোর্সটি শেষ করলে, আপনার বাস্তব কাজের অভিজ্ঞতা থাকবে, যা মার্কেটপ্লেসে দ্রুত সফলতা অর্জনে সহায়ক হবে।</p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> তাই আর দেরি কেনো? গ্রাফিক ডিজাইনের সার্টিফাইড কোর্সে এনরোল করতে আজই বেছে নিন  Professional Graphics Design Course</p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> WebDev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By Webdev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 5 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p> <br>
+                                <a href="https://terabox.com/s/1i56fSlSWBCDDoH9JO4IsrA">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+            </div>
+            <!-- modal  for item four end -->
+
+            <!-- modal  for item five start -->
+            <div id="ex5" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/5.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span>January 2023</span>
+                            <span class="dot-icon">Android App Development</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> Android App Development Course In Bangladesh</h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> অ্যান্ড্রয়েড অ্যাপ ডেভেলপমেন্ট যারা শিখতে চান তাদের জন্য এই কোর্স। একদম শুরু থেকে স্টেপ বাই স্টেপ গাইড </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> Android is one of the most popular operating system among mobile and tab users. The use of Android devices without apps is unimaginable.</p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> Android is one of the most popular operating system among mobile and tab users. The use of Android devices without apps is unimaginable. Companies are constantly developing their Android apps to provide various information, services. With this popularity of Android devices, Android app development has become a popular profession in the past month. You can build a career in freelancing marketplace or local job sector as a professional in Android App Development. If you want to build a professional or freelancing career in Android App Development, you have to be expert.</p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> WebDev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By WebDev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 5 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p> <br>
+                                <a href="https://terabox.com/s/1RSTFrDzxfMIRjZUA7eXMSg">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+            </div>
+            <!-- modal  for item five end -->
+
+            <!-- modal  for item six start -->
+            <div id="ex6" class="modal-container modal">
+                <div class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+                    <div class="pr-3 pb-2">
+                        <img class="w-full md:h-[450px] object-cover rounded-xl mt-6" src="images/blog_images/6.jpg"
+                            alt="blog image" />
+                        <div class="flex mt-4 text-tiny text-black dark:text-white">
+                            <span>January 2023</span>
+                            <span class="dot-icon">Fiverr Success Course</span>
+                        </div>
+                        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium"> Fiverr Success Course In Bangladesh</h2>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> সাক্সেস কোর্স মূলত একটা নির্দিষ্ট শ্রেণির জন্য সীমাবদ্ধ না। কিন্তু যারা ফাইভাবে ফ্রিল্যান্সিং করতে চায় তাদের জন্য মূলত এই কোর্স। মনে করুন আপনার একটা বিষয়ে স্কিলস বা দক্ষতা আছে। আপনি এখন সেই দক্ষতাকে কাজে লাগিয়ে আপনি মার্কেটপ্লসে কিছু একটা কাজ করতে চাচ্ছেন। বিশেষ করে ফাইবারে। তারমানে হলো যে আপনার অবশ্যই যে কোন একটা স্কিলস থাকতে হবে। যেমন ধরুন- ওয়েব ডিজাইন-ডেভেলপমেন্ট, গ্রাফিক ডিজাইন, SEO, ডিজিটাল মার্কেটিং ইত্যাদির যে কোন একটা। অর্থাৎ এসবের মাঝে যে স্কিলস দিয়ে আপনি কাজ করতে চান সেই বিষয়ে পূর্ণ দক্ষতা অর্জন করতে হবে। </p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> তার পরেই আপনার এই কোর্সে ইনরোল করা উচিত। তাহলেই এই কোর্স আপনার জন্য সার্থক হবে বলে আমি মন করি। অন্যথয় এই কোর্স করা আপনার জন্য কোন যুক্তি সঙ্গত না বলে আমি মনে করি।</p>
+                        <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4"> যেহেতু এটা একটা পূর্ণাঙ্গ কোর্স তাহলে এখানে সব কিছু পাওয়া যাবে এটাই স্বাভাবিক। অর্থাৎ আপনি যদি কিছু নাও জানেন ফাইবার সম্বন্ধে তার পরেও আপনি এই কোর্সের দ্বারা বিস্তারতি জেনে সামনে আগাতে পারবেন। এই কোর্সে ব্যাসিক থেকে শুরু করে এডভান্সড লেভেল পর্যন্ত আলোচনা করা হয়েছে। ফাইবারে কিভাবে গিগ খুলব সেখান থেকে শুরু করে আরো উচ্চ লেভেলে যা যা আছে সব নিয়েই আলোচনা করেছে মশিউর ভাইয়া এই কোর্সে। তাছাড়া বেশ সুন্দর করে তাদের ওয়েব সাইটেও উল্লেখ আছে যে তারা ব্যসিক থেকেই শিখাবেন । তাই আপনি যদি ফাইবারে এক্সপার্ট হতে চান তাহলে এই কোর্সটা আপনার জন্য হতে পারে একটা মাস্টার্স কোর্স।</p>
+                    </div>
+
+                    <div class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+                        <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+                            <div>
+                                <img class="md:w-[125px] rounded-xl" src="images/about/me2.jpg" alt="about image" />
+                            </div>
+                            <div class="pl-5">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="dark:text-white text-[22px] font-medium"> WebDev </h3>
+                                    <span class="dark:text-[#dedede] text-tiny">Arranged By WebDev</span>
+                                </div>
+                                <p class="dark:text-white md:pr-16"> 5 years of experience in WordPress and Wix | Elementor | Divi | Woocommerce | PSD/Figma/XD to Responsive HTML or WordPress Theme | Responsive Web Design
+Design a website can be a delicate and complex process. I will ensure that the correct components are integrated, the website is aesthetically pleasing, and it has the proper elements to generate conversions. Design a Modern, Eye-Catching, Responsive website is my working Goal.
+                                </p> <br>
+                                <a href="https://terabox.com/s/1uqJh04pfNxREkXhhoa2ebA">
+                                   <button
+                                    class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                                    কোর্স ডাউনলোড করেন !</button> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
+                        <h6 class="dark:text-white text-[20px]">Login with:</h6>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="pr-3 pb-4">
+                            <form class="w-full">
+                                <label class="block mb-2">
+                                    <span class="dark:text-white text-[25px] font-medium">Leave a Reply</span>
+                                    <textarea
+                                        class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                                        rows="3"></textarea>
+                                </label>
+                                <button class="comment-btn">Comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark ">Close</a>
+            </div>
+
+            <!-- modal start for item six end -->
+
+        </div>
+    </div>
+
+
+    <!--=== js ===-->
+    <script src="js/vendor/jquary.min.js"></script>
+    <script src="js/vendor/jquery.modal.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
